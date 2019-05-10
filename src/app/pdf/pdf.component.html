@@ -1,0 +1,51 @@
+<div class="posCen">
+		<div id="html2Pdf">
+		   <div class="container main-container">
+			 <header>
+			  <h1>Hospital Name</h1>
+			 </header>
+			 <div class="row name-wrapper">
+			 <table width="100%" style="margin-bottom: 0.5em;">
+			   <tr style="padding-top: 2em;">
+				 <td style="width: 70%"><strong>Name:&nbsp;</strong> <i>Ram Krishna Hari Krishna Prasad Ramalingam Iyer</i></td>
+				 <td><strong>Gender:&nbsp;</strong> <i>M</i></td>
+				 <td><strong>Age:&nbsp;</strong> <i>100</i></td>
+			   </tr>
+			 </table>
+			 <strong>Address:&nbsp;</strong> <i>Kathmandu ko kunai eutaa bhitra bhitra</i>
+			</div>
+			<div class="table-container">
+				<table class="table table-bordered">
+				<thead>
+				  <tr>
+					<th>S.N</th>
+					<th>Name</th>
+					<th>Doses</th>
+					<th>Times</th>
+					<th>Days</th>
+				  </tr>
+				  </thead>
+				  <tbody>
+					<tr *ngFor="let x of medicines; index as i">
+					  <th>{{i+1}}</th>
+					  <td>{{x.name}}</td>
+					  <td>{{x.doses}}</td>
+					  <td>{{x.times}}</td>
+					  <td>{{x.days}}</td>
+		
+					</tr>
+				</tbody>
+			  </table>
+			 </div>
+		</div>
+
+		   <!-- <div class="footer-container">
+			ljdsaflkldsakfjlkadsf.kadslkfjljkdsafjlkadsflkdjsaflkjdsalkfjlkdsajflkdsajflkdjsaflkjsdalkfjdslafjalkdsfjlkasdjflkdsajflkadsjflkjdsalkfkjasdlkfjlk
+		   </div> -->
+			</div>
+			</div>
+		
+		  
+			 
+			<button (click)="generatePdf()">Print</button>
+			

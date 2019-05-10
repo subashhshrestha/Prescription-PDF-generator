@@ -1,0 +1,32 @@
+<div class="contailer-fluid">
+    <table class="table table-borderless">
+            <thead>
+              <tr>
+               
+                <th scope="col">Name</th>
+                <th scope="col">Doses</th>
+                <th scope="col">Times</th>
+                <th scope="col">Days</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of medicine">
+                
+                <td><input type="text" class="form-control" [(ngModel)]="item.name"></td>
+                <td><input type="text" class="form-control" [(ngModel)]="item.doses"></td>
+                <td><input type="text" class="form-control" [(ngModel)]="item.times"></td>
+                <td><input type="text" class="form-control" [(ngModel)]="item.dayss"></td>
+                <td *ngIf="!item.added; else delete"><button class="btn btn-outline-dark btn-circle"  (click)="add()"><i  class="fa fa-plus"></i></button></td>
+                <ng-template #delete>
+                    <td>
+                    <button class="btn btn-outline-dark btn-circle"  (click)="remove(item)"><i  class="fa fa-minus"></i></button>
+                    </td>
+                </ng-template>
+            </tr>
+              <tr>
+                  <button class="btn btn-secondary" (click)="show()">Submit</button>
+              </tr>
+            </tbody>
+          </table>
+</div>
